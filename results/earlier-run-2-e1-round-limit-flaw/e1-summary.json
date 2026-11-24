@@ -1,0 +1,439 @@
+{
+  "experiment": "E1",
+  "design": {
+    "events_per_unit": 40,
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "rates": [
+      0.1,
+      0.3,
+      0.5
+    ],
+    "budgets": [
+      3,
+      6
+    ],
+    "bootstrap_seed": 20261
+  },
+  "rows": [
+    {
+      "condition": "naive|p0.1",
+      "config": "naive",
+      "failure_rate": 0.1,
+      "retry_budget": 1,
+      "n_runs": 8,
+      "events_per_run": 40,
+      "events_total": 320,
+      "delivered_fraction_mean": 0.9375,
+      "delivered_fraction_ci95": [
+        0.9125,
+        0.9625
+      ],
+      "lost_fraction_mean": 0.0625,
+      "lost_fraction_ci95": [
+        0.0375,
+        0.0875
+      ],
+      "lost_events_total": 20,
+      "lost_pooled_wilson95": [
+        0.0408,
+        0.0946
+      ],
+      "duplicate_effects_per_100_events_without_dedup_mean": 0,
+      "duplicate_effects_without_dedup_ci95": [
+        0,
+        0
+      ],
+      "duplicate_effects_per_100_events_with_dedup_mean": 0,
+      "events_with_duplicate_effect_without_dedup": 0,
+      "events_with_duplicate_effect_with_dedup": 0,
+      "requests_per_event_mean": 1,
+      "requests_per_event_median": 1,
+      "model_expected_lost_fraction": 0.07
+    },
+    {
+      "condition": "queue|p0.1|B3",
+      "config": "queue",
+      "failure_rate": 0.1,
+      "retry_budget": 3,
+      "n_runs": 8,
+      "events_per_run": 40,
+      "events_total": 320,
+      "delivered_fraction_mean": 0.9938,
+      "delivered_fraction_ci95": [
+        0.9844,
+        1
+      ],
+      "lost_fraction_mean": 0.0063,
+      "lost_fraction_ci95": [
+        0,
+        0.0156
+      ],
+      "lost_events_total": 2,
+      "lost_pooled_wilson95": [
+        0.0017,
+        0.0225
+      ],
+      "duplicate_effects_per_100_events_without_dedup_mean": 3.44,
+      "duplicate_effects_without_dedup_ci95": [
+        1.88,
+        5.31
+      ],
+      "duplicate_effects_per_100_events_with_dedup_mean": 0,
+      "events_with_duplicate_effect_without_dedup": 11,
+      "events_with_duplicate_effect_with_dedup": 0,
+      "requests_per_event_mean": 1.094,
+      "requests_per_event_median": 1.1,
+      "plugin_reported_dead_total": 0,
+      "plugin_reported_delivered_total": 316,
+      "plugin_pending_left_total": 4,
+      "plugin_false_dead_total": 0,
+      "signature_failures_seen_by_receiver": 0,
+      "model_expected_lost_fraction": 0.00034
+    },
+    {
+      "condition": "queue|p0.1|B6",
+      "config": "queue",
+      "failure_rate": 0.1,
+      "retry_budget": 6,
+      "n_runs": 8,
+      "events_per_run": 40,
+      "events_total": 320,
+      "delivered_fraction_mean": 1,
+      "delivered_fraction_ci95": [
+        1,
+        1
+      ],
+      "lost_fraction_mean": 0,
+      "lost_fraction_ci95": [
+        0,
+        0
+      ],
+      "lost_events_total": 0,
+      "lost_pooled_wilson95": [
+        0,
+        0.0119
+      ],
+      "duplicate_effects_per_100_events_without_dedup_mean": 4.06,
+      "duplicate_effects_without_dedup_ci95": [
+        1.88,
+        6.25
+      ],
+      "duplicate_effects_per_100_events_with_dedup_mean": 0,
+      "events_with_duplicate_effect_without_dedup": 13,
+      "events_with_duplicate_effect_with_dedup": 0,
+      "requests_per_event_mean": 1.106,
+      "requests_per_event_median": 1.125,
+      "plugin_reported_dead_total": 0,
+      "plugin_reported_delivered_total": 320,
+      "plugin_pending_left_total": 0,
+      "plugin_false_dead_total": 0,
+      "signature_failures_seen_by_receiver": 0,
+      "model_expected_lost_fraction": 0
+    },
+    {
+      "condition": "naive|p0.3",
+      "config": "naive",
+      "failure_rate": 0.3,
+      "retry_budget": 1,
+      "n_runs": 8,
+      "events_per_run": 40,
+      "events_total": 320,
+      "delivered_fraction_mean": 0.8125,
+      "delivered_fraction_ci95": [
+        0.775,
+        0.8531
+      ],
+      "lost_fraction_mean": 0.1875,
+      "lost_fraction_ci95": [
+        0.1469,
+        0.225
+      ],
+      "lost_events_total": 60,
+      "lost_pooled_wilson95": [
+        0.1485,
+        0.2339
+      ],
+      "duplicate_effects_per_100_events_without_dedup_mean": 0,
+      "duplicate_effects_without_dedup_ci95": [
+        0,
+        0
+      ],
+      "duplicate_effects_per_100_events_with_dedup_mean": 0,
+      "events_with_duplicate_effect_without_dedup": 0,
+      "events_with_duplicate_effect_with_dedup": 0,
+      "requests_per_event_mean": 1,
+      "requests_per_event_median": 1,
+      "model_expected_lost_fraction": 0.21
+    },
+    {
+      "condition": "queue|p0.3|B3",
+      "config": "queue",
+      "failure_rate": 0.3,
+      "retry_budget": 3,
+      "n_runs": 8,
+      "events_per_run": 40,
+      "events_total": 320,
+      "delivered_fraction_mean": 0.8813,
+      "delivered_fraction_ci95": [
+        0.8437,
+        0.9219
+      ],
+      "lost_fraction_mean": 0.1188,
+      "lost_fraction_ci95": [
+        0.0781,
+        0.1563
+      ],
+      "lost_events_total": 38,
+      "lost_pooled_wilson95": [
+        0.0878,
+        0.1588
+      ],
+      "duplicate_effects_per_100_events_without_dedup_mean": 5,
+      "duplicate_effects_without_dedup_ci95": [
+        2.19,
+        7.81
+      ],
+      "duplicate_effects_per_100_events_with_dedup_mean": 0,
+      "events_with_duplicate_effect_without_dedup": 16,
+      "events_with_duplicate_effect_with_dedup": 0,
+      "requests_per_event_mean": 1.131,
+      "requests_per_event_median": 1.125,
+      "plugin_reported_dead_total": 0,
+      "plugin_reported_delivered_total": 265,
+      "plugin_pending_left_total": 55,
+      "plugin_false_dead_total": 0,
+      "signature_failures_seen_by_receiver": 0,
+      "model_expected_lost_fraction": 0.00926
+    },
+    {
+      "condition": "queue|p0.3|B6",
+      "config": "queue",
+      "failure_rate": 0.3,
+      "retry_budget": 6,
+      "n_runs": 8,
+      "events_per_run": 40,
+      "events_total": 320,
+      "delivered_fraction_mean": 0.95,
+      "delivered_fraction_ci95": [
+        0.925,
+        0.975
+      ],
+      "lost_fraction_mean": 0.05,
+      "lost_fraction_ci95": [
+        0.025,
+        0.075
+      ],
+      "lost_events_total": 16,
+      "lost_pooled_wilson95": [
+        0.031,
+        0.0797
+      ],
+      "duplicate_effects_per_100_events_without_dedup_mean": 7.5,
+      "duplicate_effects_without_dedup_ci95": [
+        3.44,
+        11.88
+      ],
+      "duplicate_effects_per_100_events_with_dedup_mean": 0,
+      "events_with_duplicate_effect_without_dedup": 24,
+      "events_with_duplicate_effect_with_dedup": 0,
+      "requests_per_event_mean": 1.247,
+      "requests_per_event_median": 1.2,
+      "plugin_reported_dead_total": 0,
+      "plugin_reported_delivered_total": 293,
+      "plugin_pending_left_total": 27,
+      "plugin_false_dead_total": 0,
+      "signature_failures_seen_by_receiver": 0,
+      "model_expected_lost_fraction": 0.00009
+    },
+    {
+      "condition": "naive|p0.5",
+      "config": "naive",
+      "failure_rate": 0.5,
+      "retry_budget": 1,
+      "n_runs": 8,
+      "events_per_run": 40,
+      "events_total": 320,
+      "delivered_fraction_mean": 0.6719,
+      "delivered_fraction_ci95": [
+        0.6344,
+        0.7094
+      ],
+      "lost_fraction_mean": 0.3281,
+      "lost_fraction_ci95": [
+        0.2906,
+        0.3656
+      ],
+      "lost_events_total": 105,
+      "lost_pooled_wilson95": [
+        0.279,
+        0.3813
+      ],
+      "duplicate_effects_per_100_events_without_dedup_mean": 0,
+      "duplicate_effects_without_dedup_ci95": [
+        0,
+        0
+      ],
+      "duplicate_effects_per_100_events_with_dedup_mean": 0,
+      "events_with_duplicate_effect_without_dedup": 0,
+      "events_with_duplicate_effect_with_dedup": 0,
+      "requests_per_event_mean": 1,
+      "requests_per_event_median": 1,
+      "model_expected_lost_fraction": 0.35
+    },
+    {
+      "condition": "queue|p0.5|B3",
+      "config": "queue",
+      "failure_rate": 0.5,
+      "retry_budget": 3,
+      "n_runs": 8,
+      "events_per_run": 40,
+      "events_total": 320,
+      "delivered_fraction_mean": 0.725,
+      "delivered_fraction_ci95": [
+        0.6875,
+        0.7656
+      ],
+      "lost_fraction_mean": 0.275,
+      "lost_fraction_ci95": [
+        0.2344,
+        0.3125
+      ],
+      "lost_events_total": 88,
+      "lost_pooled_wilson95": [
+        0.229,
+        0.3264
+      ],
+      "duplicate_effects_per_100_events_without_dedup_mean": 2.5,
+      "duplicate_effects_without_dedup_ci95": [
+        0.94,
+        5
+      ],
+      "duplicate_effects_per_100_events_with_dedup_mean": 0,
+      "events_with_duplicate_effect_without_dedup": 8,
+      "events_with_duplicate_effect_with_dedup": 0,
+      "requests_per_event_mean": 1.119,
+      "requests_per_event_median": 1.1,
+      "plugin_reported_dead_total": 0,
+      "plugin_reported_delivered_total": 183,
+      "plugin_pending_left_total": 137,
+      "plugin_false_dead_total": 0,
+      "signature_failures_seen_by_receiver": 0,
+      "model_expected_lost_fraction": 0.04287
+    },
+    {
+      "condition": "queue|p0.5|B6",
+      "config": "queue",
+      "failure_rate": 0.5,
+      "retry_budget": 6,
+      "n_runs": 8,
+      "events_per_run": 40,
+      "events_total": 320,
+      "delivered_fraction_mean": 0.8156,
+      "delivered_fraction_ci95": [
+        0.7875,
+        0.8406
+      ],
+      "lost_fraction_mean": 0.1844,
+      "lost_fraction_ci95": [
+        0.1594,
+        0.2125
+      ],
+      "lost_events_total": 59,
+      "lost_pooled_wilson95": [
+        0.1457,
+        0.2305
+      ],
+      "duplicate_effects_per_100_events_without_dedup_mean": 7.19,
+      "duplicate_effects_without_dedup_ci95": [
+        3.75,
+        11.56
+      ],
+      "duplicate_effects_per_100_events_with_dedup_mean": 0,
+      "events_with_duplicate_effect_without_dedup": 23,
+      "events_with_duplicate_effect_with_dedup": 0,
+      "requests_per_event_mean": 1.328,
+      "requests_per_event_median": 1.263,
+      "plugin_reported_dead_total": 0,
+      "plugin_reported_delivered_total": 215,
+      "plugin_pending_left_total": 105,
+      "plugin_false_dead_total": 0,
+      "signature_failures_seen_by_receiver": 0,
+      "model_expected_lost_fraction": 0.00184
+    }
+  ],
+  "paired_comparisons": [
+    {
+      "comparison": "queue(B=3) vs naive, delivered fraction, p=0.1",
+      "pairs": 8,
+      "median_difference": 0.05,
+      "wilcoxon_p_exact": 0.01563,
+      "cliffs_delta": 0.813,
+      "holm_adjusted_p": 0.04686
+    },
+    {
+      "comparison": "queue(B=6) vs naive, delivered fraction, p=0.1",
+      "pairs": 8,
+      "median_difference": 0.0625,
+      "wilcoxon_p_exact": 0.01563,
+      "cliffs_delta": 0.875,
+      "holm_adjusted_p": 0.04686
+    },
+    {
+      "comparison": "queue(B=3) vs naive, delivered fraction, p=0.3",
+      "pairs": 8,
+      "median_difference": 0.0625,
+      "wilcoxon_p_exact": 0.00781,
+      "cliffs_delta": 0.641,
+      "holm_adjusted_p": 0.04686
+    },
+    {
+      "comparison": "queue(B=6) vs naive, delivered fraction, p=0.3",
+      "pairs": 8,
+      "median_difference": 0.1375,
+      "wilcoxon_p_exact": 0.00781,
+      "cliffs_delta": 0.922,
+      "holm_adjusted_p": 0.04686
+    },
+    {
+      "comparison": "queue(B=3) vs naive, delivered fraction, p=0.5",
+      "pairs": 8,
+      "median_difference": 0.05,
+      "wilcoxon_p_exact": 0.00781,
+      "cliffs_delta": 0.5,
+      "holm_adjusted_p": 0.04686
+    },
+    {
+      "comparison": "queue(B=6) vs naive, delivered fraction, p=0.5",
+      "pairs": 8,
+      "median_difference": 0.1375,
+      "wilcoxon_p_exact": 0.00781,
+      "cliffs_delta": 0.953,
+      "holm_adjusted_p": 0.04686
+    }
+  ],
+  "total_runs": 72,
+  "environment": {
+    "node": "v25.9.0",
+    "platform": "win32 10.0.26200",
+    "logical_cpus": 8,
+    "cpu_model": "AMD EPYC 7543P 32-Core Processor               ",
+    "total_memory_gb": 28,
+    "wordpress": "7.1.3",
+    "php": "8.3.33",
+    "database": "8.0.38-mysql-on-sqlite-3.1.0",
+    "playground_cli": "3.1.60",
+    "plugin_version": "0.1.0",
+    "playground_workers": 2,
+    "note": "Shared, heavily loaded machine; other processes were running. Wall-clock durations are not used as results."
+  },
+  "simulated": "The receiver and its failures are SIMULATED by a local Node test receiver; WordPress and the HTTP requests are real. See the experiment script header for what each experiment does and does not show."
+}

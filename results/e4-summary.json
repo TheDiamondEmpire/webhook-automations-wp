@@ -1,0 +1,224 @@
+{
+  "experiment": "E4",
+  "design": {
+    "repetitions": 3
+  },
+  "documented_events": [
+    "post.published",
+    "post.updated",
+    "post.trashed",
+    "post.deleted",
+    "page.published",
+    "page.updated",
+    "page.trashed",
+    "page.deleted",
+    "user.registered",
+    "comment.created",
+    "comment.approved",
+    "custom.example",
+    "webhook.test"
+  ],
+  "events_covered": 13,
+  "repetitions": 3,
+  "all_positive_passed": true,
+  "all_negative_controls_passed": true,
+  "unexpected_events_total": 0,
+  "rows": [
+    {
+      "event": "post.published",
+      "kind": "positive",
+      "n": 3,
+      "passed": 3,
+      "pass_fraction": 1,
+      "wilson95": [
+        0.4385,
+        1
+      ],
+      "errors": []
+    },
+    {
+      "event": "post.updated",
+      "kind": "positive",
+      "n": 3,
+      "passed": 3,
+      "pass_fraction": 1,
+      "wilson95": [
+        0.4385,
+        1
+      ],
+      "errors": []
+    },
+    {
+      "event": "post.trashed",
+      "kind": "positive",
+      "n": 3,
+      "passed": 3,
+      "pass_fraction": 1,
+      "wilson95": [
+        0.4385,
+        1
+      ],
+      "errors": []
+    },
+    {
+      "event": "post.deleted",
+      "kind": "positive",
+      "n": 3,
+      "passed": 3,
+      "pass_fraction": 1,
+      "wilson95": [
+        0.4385,
+        1
+      ],
+      "errors": []
+    },
+    {
+      "event": "page.published",
+      "kind": "positive",
+      "n": 3,
+      "passed": 3,
+      "pass_fraction": 1,
+      "wilson95": [
+        0.4385,
+        1
+      ],
+      "errors": []
+    },
+    {
+      "event": "page.updated",
+      "kind": "positive",
+      "n": 3,
+      "passed": 3,
+      "pass_fraction": 1,
+      "wilson95": [
+        0.4385,
+        1
+      ],
+      "errors": []
+    },
+    {
+      "event": "page.trashed",
+      "kind": "positive",
+      "n": 3,
+      "passed": 3,
+      "pass_fraction": 1,
+      "wilson95": [
+        0.4385,
+        1
+      ],
+      "errors": []
+    },
+    {
+      "event": "page.deleted",
+      "kind": "positive",
+      "n": 3,
+      "passed": 3,
+      "pass_fraction": 1,
+      "wilson95": [
+        0.4385,
+        1
+      ],
+      "errors": []
+    },
+    {
+      "event": "user.registered",
+      "kind": "positive",
+      "n": 3,
+      "passed": 3,
+      "pass_fraction": 1,
+      "wilson95": [
+        0.4385,
+        1
+      ],
+      "errors": []
+    },
+    {
+      "event": "comment.created",
+      "kind": "positive",
+      "n": 3,
+      "passed": 3,
+      "pass_fraction": 1,
+      "wilson95": [
+        0.4385,
+        1
+      ],
+      "errors": []
+    },
+    {
+      "event": "comment.approved",
+      "kind": "positive",
+      "n": 3,
+      "passed": 3,
+      "pass_fraction": 1,
+      "wilson95": [
+        0.4385,
+        1
+      ],
+      "errors": []
+    },
+    {
+      "event": "custom.example",
+      "kind": "positive",
+      "n": 3,
+      "passed": 3,
+      "pass_fraction": 1,
+      "wilson95": [
+        0.4385,
+        1
+      ],
+      "errors": []
+    },
+    {
+      "event": "webhook.test",
+      "kind": "positive",
+      "n": 3,
+      "passed": 3,
+      "pass_fraction": 1,
+      "wilson95": [
+        0.4385,
+        1
+      ],
+      "errors": []
+    },
+    {
+      "event": "negative: draft created",
+      "kind": "negative-control",
+      "n": 3,
+      "passed": 3,
+      "pass_fraction": 1,
+      "wilson95": [
+        0.4385,
+        1
+      ],
+      "errors": []
+    },
+    {
+      "event": "negative: spam comment",
+      "kind": "negative-control",
+      "n": 3,
+      "passed": 3,
+      "pass_fraction": 1,
+      "wilson95": [
+        0.4385,
+        1
+      ],
+      "errors": []
+    }
+  ],
+  "total_runs": 3,
+  "environment": {
+    "node": "v25.9.0",
+    "platform": "win32 10.0.26200",
+    "logical_cpus": 8,
+    "cpu_model": "AMD EPYC 7543P 32-Core Processor               ",
+    "total_memory_gb": 28,
+    "wordpress": "7.1.3",
+    "php": "8.3.33",
+    "database": "8.0.38-mysql-on-sqlite-3.1.0",
+    "playground_cli": "3.1.60",
+    "plugin_version": "0.1.0",
+    "playground_workers": 2,
+    "note": "Shared, heavily loaded machine; other processes were running. Wall-clock durations are not used as results."
+  },
+  "simulated": "The receiver and its failures are SIMULATED by a local Node test receiver; WordPress and the HTTP requests are real. See the experiment script header for what each experiment does and does not show."
+}

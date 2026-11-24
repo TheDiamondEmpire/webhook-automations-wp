@@ -1,0 +1,128 @@
+{
+  "$comment": "Documented payload schemas (JSON Schema draft-07). 'envelope' wraps every delivery; 'events' maps each event name to the schema of its envelope.data. Used by tests/events.test.mjs and experiment E4.",
+  "envelope": {
+    "type": "object",
+    "required": ["id", "idempotency_key", "event", "created_at", "site_url", "data"],
+    "additionalProperties": false,
+    "properties": {
+      "id": { "type": "string", "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$" },
+      "idempotency_key": { "type": "string", "minLength": 8, "maxLength": 100 },
+      "event": { "type": "string" },
+      "created_at": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$" },
+      "site_url": { "type": "string", "minLength": 1 },
+      "replay_of": { "type": "string", "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$" },
+      "data": { "type": "object" }
+    }
+  },
+  "definitions": {
+    "post": {
+      "type": "object",
+      "required": ["post"],
+      "additionalProperties": false,
+      "properties": {
+        "post": {
+          "type": "object",
+          "required": ["id", "type", "status", "title", "slug", "excerpt", "permalink", "author", "published_at", "modified_at"],
+          "additionalProperties": false,
+          "properties": {
+            "id": { "type": "integer", "minimum": 1 },
+            "type": { "enum": ["post", "page"] },
+            "status": { "type": "string" },
+            "title": { "type": "string" },
+            "slug": { "type": "string" },
+            "excerpt": { "type": "string" },
+            "permalink": { "type": "string" },
+            "author": {
+              "type": "object",
+              "required": ["id", "display_name"],
+              "additionalProperties": false,
+              "properties": { "id": { "type": "integer" }, "display_name": { "type": "string" } }
+            },
+            "published_at": { "type": "string" },
+            "modified_at": { "type": "string" }
+          }
+        }
+      }
+    },
+    "user": {
+      "type": "object",
+      "required": ["user"],
+      "additionalProperties": false,
+      "properties": {
+        "user": {
+          "type": "object",
+          "required": ["id", "login", "display_name", "email", "roles", "registered_at"],
+          "additionalProperties": false,
+          "properties": {
+            "id": { "type": "integer", "minimum": 1 },
+            "login": { "type": "string", "minLength": 1 },
+            "display_name": { "type": "string" },
+            "email": { "type": "string" },
+            "roles": { "type": "array", "items": { "type": "string" } },
+            "registered_at": { "type": "string" }
+          }
+        }
+      }
+    },
+    "comment": {
+      "type": "object",
+      "required": ["comment"],
+      "additionalProperties": false,
+      "properties": {
+        "comment": {
+          "type": "object",
+          "required": ["id", "post_id", "parent_id", "author_name", "author_email", "content", "status", "type", "created_at"],
+          "additionalProperties": false,
+          "properties": {
+            "id": { "type": "integer", "minimum": 1 },
+            "post_id": { "type": "integer" },
+            "parent_id": { "type": "integer" },
+            "author_name": { "type": "string" },
+            "author_email": { "type": "string" },
+            "content": { "type": "string" },
+            "status": { "enum": ["approved", "pending"] },
+            "type": { "type": "string" },
+            "created_at": { "type": "string" }
+          }
+        }
+      }
+    },
+    "custom": {
+      "type": "object",
+      "required": ["custom"],
+      "additionalProperties": false,
+      "properties": {
+        "custom": {
+          "type": "object",
+          "required": ["name", "data"],
+          "additionalProperties": false,
+          "properties": { "name": { "type": "string", "pattern": "^[a-z0-9][a-z0-9_.\\-]{0,63}$" }, "data": {} }
+        }
+      }
+    },
+    "test": {
+      "type": "object",
+      "required": ["message", "site"],
+      "additionalProperties": false,
+      "properties": {
+        "message": { "type": "string" },
+        "site": { "type": "object", "required": ["url", "name"], "properties": { "url": { "type": "string" }, "name": { "type": "string" } } }
+      }
+    }
+  },
+  "events": {
+    "post.published": { "$ref": "#/definitions/post" },
+    "post.updated": { "$ref": "#/definitions/post" },
+    "post.trashed": { "$ref": "#/definitions/post" },
+    "post.deleted": { "$ref": "#/definitions/post" },
+    "page.published": { "$ref": "#/definitions/post" },
+    "page.updated": { "$ref": "#/definitions/post" },
+    "page.trashed": { "$ref": "#/definitions/post" },
+    "page.deleted": { "$ref": "#/definitions/post" },
+    "user.registered": { "$ref": "#/definitions/user" },
+    "comment.created": { "$ref": "#/definitions/comment" },
+    "comment.approved": { "$ref": "#/definitions/comment" },
+    "custom.example": { "$ref": "#/definitions/custom" },
+    "webhook.test": { "$ref": "#/definitions/test" }
+  }
+}

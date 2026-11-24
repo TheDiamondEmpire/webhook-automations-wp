@@ -1,0 +1,200 @@
+{
+  "generated_by": "tools/php-lint.mjs",
+  "tool": "php -l via php-wasm (@php-wasm/node)",
+  "versions": {
+    "7.4": {
+      "php_version": "7.4.33",
+      "files": 18,
+      "passed": 18,
+      "results": [
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-admin.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-backoff.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-clock.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-crypto.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-db.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-endpoints.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-events.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-plugin.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-queue.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-redactor.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-rest.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-settings.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-signer.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-template.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-url-guard.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/uninstall.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/webhook-automations-wp.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "tests/harness/mu-plugins/wawp-test-ops.php",
+          "ok": true,
+          "message": ""
+        }
+      ]
+    },
+    "8.5": {
+      "php_version": "8.5.10",
+      "files": 18,
+      "passed": 18,
+      "results": [
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-admin.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-backoff.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-clock.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-crypto.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-db.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-endpoints.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-events.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-plugin.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-queue.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-redactor.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-rest.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-settings.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-signer.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-template.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/includes/class-wawp-url-guard.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/uninstall.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "plugin/webhook-automations-wp/webhook-automations-wp.php",
+          "ok": true,
+          "message": ""
+        },
+        {
+          "file": "tests/harness/mu-plugins/wawp-test-ops.php",
+          "ok": true,
+          "message": ""
+        }
+      ]
+    }
+  }
+}

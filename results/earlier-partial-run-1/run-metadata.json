@@ -1,0 +1,14 @@
+{
+  "protocol": "v0.2",
+  "quick_mode": false,
+  "invocations": [
+    {
+      "id": "inv-1",
+      "command": "node experiments/run.mjs all",
+      "started_at": "2026-10-24T00:02:34.548Z",
+      "finished_at": null,
+      "completed": false,
+      "experiments": {}
+    }
+  ]
+}

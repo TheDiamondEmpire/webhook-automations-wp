@@ -1,0 +1,26 @@
+{
+  "command": "node tools/run-tests.mjs --php 7.4 --port 9433 --name wp60 --wp 6.0 --label wp6.0 --record",
+  "finished_at": "2026-10-23T23:58:25.235Z",
+  "php": "7.4.33",
+  "wordpress": "6.0.17",
+  "database": "8.0.38-mysql-on-sqlite-3.1.0",
+  "test_cases": 66,
+  "failed": 0,
+  "skipped": 0,
+  "exit_code": 0,
+  "files": [
+    "tests/events.test.mjs",
+    "tests/m0-clock-guard.test.mjs",
+    "tests/m1-skeleton.test.mjs",
+    "tests/m2-delivery.test.mjs",
+    "tests/m3-signing.test.mjs",
+    "tests/m4-retries.test.mjs",
+    "tests/m5-features.test.mjs",
+    "tests/schemas.unit.test.mjs",
+    "tests/security.test.mjs",
+    "tests/static-scan.test.mjs",
+    "tests/stats.unit.test.mjs",
+    "tests/verifier.unit.test.mjs"
+  ],
+  "junit_suite_attr_tests": 0
+}

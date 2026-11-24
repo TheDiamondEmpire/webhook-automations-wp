@@ -1,0 +1,87 @@
+{
+  "experiment": "E2",
+  "design": {
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "deliveries": 40,
+    "max_attempts": 10,
+    "base_delay": 30,
+    "max_delay": 600,
+    "jitters": [
+      0,
+      0.2
+    ]
+  },
+  "rows": [
+    {
+      "condition": "jitter=0",
+      "jitter": 0,
+      "n_runs": 3,
+      "deliveries_total": 120,
+      "retry_intervals_n": 1080,
+      "nominal_delay_correct": "1080/1080",
+      "delay_within_jitter_bounds": "1080/1080",
+      "attempt_never_before_scheduled_time": "1080/1080",
+      "deliveries_dead_after_exactly_max_attempts": "120/120",
+      "samples_at_cap": 480,
+      "delay_over_nominal_ratio_mean": 1,
+      "delay_over_nominal_ratio_ci95": [
+        1,
+        1
+      ],
+      "delay_over_nominal_ratio_min": 1,
+      "delay_over_nominal_ratio_max": 1,
+      "lateness_seconds_median": 1,
+      "lateness_seconds_p95": 5,
+      "lateness_seconds_max": 10
+    },
+    {
+      "condition": "jitter=0.2",
+      "jitter": 0.2,
+      "n_runs": 3,
+      "deliveries_total": 120,
+      "retry_intervals_n": 1080,
+      "nominal_delay_correct": "1080/1080",
+      "delay_within_jitter_bounds": "1080/1080",
+      "attempt_never_before_scheduled_time": "1080/1080",
+      "deliveries_dead_after_exactly_max_attempts": "120/120",
+      "samples_at_cap": 480,
+      "delay_over_nominal_ratio_mean": 0.9988,
+      "delay_over_nominal_ratio_ci95": [
+        0.9919,
+        1.0055
+      ],
+      "delay_over_nominal_ratio_min": 0.8,
+      "delay_over_nominal_ratio_max": 1.2,
+      "lateness_seconds_median": 0,
+      "lateness_seconds_p95": 1,
+      "lateness_seconds_max": 3,
+      "ks_vs_uniform_note": "computed on intervals with nominal >= 240 s only, where integer rounding of seconds is negligible",
+      "ks_vs_uniform": {
+        "d": 0.0319,
+        "critical_05": 0.0506,
+        "n": 720,
+        "uniform_not_rejected": true
+      }
+    }
+  ],
+  "total_runs": 6,
+  "environment": {
+    "node": "v25.9.0",
+    "platform": "win32 10.0.26200",
+    "logical_cpus": 8,
+    "cpu_model": "AMD EPYC 7543P 32-Core Processor               ",
+    "total_memory_gb": 28,
+    "wordpress": "7.1.3",
+    "php": "8.3.33",
+    "database": "8.0.38-mysql-on-sqlite-3.1.0",
+    "playground_cli": "3.1.60",
+    "plugin_version": "0.1.0",
+    "playground_workers": 2,
+    "note": "Shared, heavily loaded machine; other processes were running. Wall-clock durations are not used as results."
+  },
+  "simulated": "The receiver and its failures are SIMULATED by a local Node test receiver; WordPress and the HTTP requests are real. See the experiment script header for what each experiment does and does not show."
+}
